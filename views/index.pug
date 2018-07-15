@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  h1= title
+  h2= example
+
+  form(action='/send' method='post' id='form')
+    input(type='text' name='url' id='url')
+    input(type='submit' value='Send')
+
+  div
+    p#name= name
+    p#white= white
+    p#black= black
+    p#answer= result
+    input(id='result' type='textarea')
+
+    script.
+        var text = `#{ textFile }`;
+        if (text.length > 0) {
+            text.replace(/\n/g, "\r\n");
+            console.log(text);
+            const textarea = document.getElementById('result').value = text;
+        }
+
+    script.
+        document.write('<a href="data:text/plain;charset=utf-8,%EF%BB%BF' + (text) + '" download="#{txt_name}.txt">Скачать #{txt_name}</a>')
