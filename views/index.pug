@@ -13,15 +13,14 @@ block content
     p#white= white
     p#black= black
     pre#answer= result
-    input(id='result' type='textarea')
 
     script.
-        var text = `#{ textFile }`;
+        /*var text = `#{ textFile }`;
         if (text.length > 0) {
             text.replace(/\n/g, "\r\n");
             console.log(text);
             const textarea = document.getElementById('result').value = text;
-        }
+        }*/
 
     script.
-        document.write('<a href="data:text/plain;charset=utf-8,%EF%BB%BF' + (text) + '" download="#{txt_name}.txt">Скачать #{txt_name}</a>')
+        //document.write('<a href="data:text/plain;charset=utf-8,%EF%BB%BF' + (text) + '" download="#{txt_name}.txt">Скачать #{txt_name}</a>')
