@@ -133,7 +133,7 @@ router.post('/send', function(req, res, next) {
                 white: white,
                 black: black,
                 result: answer,
-                textFile : data.title + '\n' + white + '\n' + black + '\n' + answer,
+                textFile : textFile,
                 txt_name : txt_name
             });
         })
